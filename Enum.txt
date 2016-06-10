@@ -1,3 +1,67 @@
 Projeto Lab BD 3
 
 Arquitetura e Organização de Computadores
+cod 4203-010 Tarde
+cod 4203-020 Noite
+P1 - 0.3
+P2 - 0.5
+T - 0.2
+
+Laboratório de Hardware
+cod 4208-010 Tarde
+P1 - 0.3
+P2 - 0.5
+T - 0.2
+
+Banco de Dados
+cod 4226-004 Tarde
+P1 - 0.3
+P2 - 0.5
+T - 0.2
+
+Sistemas Operacionais
+cod 4213-003 Tarde
+cod 4213-013 Noite
+P1 - 0.35
+P2 - 0.35
+T - 0.3
+Pré Exame - 0.2 (3 a 6) - Somado
+
+Laboratório de Banco de Dados
+cod 4233-005 Tarde
+P1 - 0.333
+P2 - 0.333
+T - 0.333
+
+Métodos Para a Produção do Conhecimento
+cod 5005-220 Tarde
+Monografia Completa - 0.8 
+Monografia Resumida - 0.2
+
+Todos com o mesmo exame
+
+Notas - Inserir conforme necessidade
+
+Chamadas
+0 - presente
+1 - ausência em uma aula
+2 - ausência em 2 aulas
+3 - ausência em 3 aulas
+4 - ausência em 4 aulas
+
+Um aluno está reprovado por falta se tiver mais que 25% do total de aulas de ausências (20 aulas para disciplinas de 4 horas aula e 10 aulas para disciplinas de 2 horas aula).
+As disciplinas de 4 horas aula tem 80 aulas por semestre e as de 2 horas aula, 40 aulas por semestre.
+
+Deve conter no sistema
+a) Fazer o sistema para inserção de notas;
+b) Fazer o sistema para inserção de faltas;
+c) Apresentar em tela, a saída de uma UDF, com cursor, que apresenta um quadro com as notas da turma:
+(RA_Aluno, Nome_Aluno, Nota1, Nota2, ..., Média_Final, Situação(Aprovado ou Reprovado))
+d) Apresentar, em tela, a saída de uma UDF, com cursor, que apresenta um quadro com
+as faltas da turma, sendo que, para cada data deverá haver um F por falta e um P por
+presença:
+(RA_Aluno, Nome_Aluno, Data1, Data2, ..., Total_Faltas)
+e) Apresentar, em browser, um relatório em PDF da mesma UDF da saída de tela de notas
+f) Apresentar, em browser, um relatório em PDF da mesma UDF da saída de tela de faltas
+
+Seguir DER 
