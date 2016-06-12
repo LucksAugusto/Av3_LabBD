@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Grade de Notas</title>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</h:head>
+<h:body>
+<div class="">
+	<div class="col-lg-8 col-md-6 col-lg-offset-2">
+		<div class="thumbnail">
+			<div class="jumbotron">
+				<h2>Sistemas Operacionais I - Noite
+				<small>Notas</small>
+				</h2>
+			</div>
+			<h:form>
+				<label for="materia">Matéria</label>
+				<input class="form-control" value="Sistemas Operacionais I" disabled="disabled" id="materia"/>
+				<h:inputHidden value="4213-013"/>
+				<br />	
+				<label for="ra">R.A Aluno</label>
+				<h:selectOneMenu id="ra" class="form-control" value="#{aoctmb.aluno}" var="ras">
+					<f:selectItem itemValue="" itemLabel="Selecione o RA..." disabled="disabled" selected="selected" hidden="hidden"/>
+					<f:selectItems value="#{ras.ra}" />
+	    		</h:selectOneMenu>
+	    		<br />
+	    		<label for="nota">Nota</label>
+	    		<h:inputText class="form-control" value=""/>
+	    		<br />
+	    		<label for="tipo">Prova</label>
+	    		<h:selectOneRadio value="">
+				   	<f:selectItem itemValue="1" itemLabel="P1" class="radio"/>
+		  		 	<f:selectItem itemValue="2" itemLabel="P2" class="radio"/>
+		 	 	 	<f:selectItem itemValue="3" itemLabel="Trabalho" class="radio"/>
+		 	 	 	<f:selectItem itemValue="5" itemLabel="Pré-Exame" class="radio"/>
+		 	 	 	<f:selectItem itemValue="4" itemLabel="Exame" class="radio"/>
+				</h:selectOneRadio>
+	    		<br />
+	    		<h:commandButton class="btn btn-success" value="Atribuir Nota" action="#{notamb.salvar}"/>
+			</h:form>
+		</div>
+	</div>
+</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</h:body>
+</html>

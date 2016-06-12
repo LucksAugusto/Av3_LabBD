@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Admin Dashboard</title>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</h:head>
+<h:body>
+<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header navbar-left">
+	    		<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target=".navbar-collapse"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<div class="navbar-left">
+				<a class="navbar-brand" href="#"> 
+				<span class="fa fa-file-text" aria-hidden="true"></span>
+					Admin Dashboard
+				</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inserir Nota<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						<li><a href=".\NotaAOCT.xhtml">AOC - T</a></li>
+						<li><a href=".\NotaAOCN.xhtml">AOC - N</a></li>
+						<li><a href=".\NotaLabHard.xhtml">Lab. Hard - T</a></li>
+						<li><a href=".\NotaBD.xhtml">BD - T</a></li>
+						<li><a href=".\NotaLabBD.xhtml">Lab. BD - T</a></li>
+						<li><a href=".\NotaSOIT.xhtml">SO I - T</a></li>
+						<li><a href=".\NotaSOIN.xhtml">SO I - N</a></li>
+						<li><a href=".\NotaMPC.xhtml">MPC - T</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chamada<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						<li><a href="#">AOC - T</a></li>
+						<li><a href="#">AOC - N</a></li>
+						<li><a href="#">Lab. Hard - T</a></li>
+						<li><a href="#">BD - T</a></li>
+						<li><a href="#">Lab. BD - T</a></li>
+						<li><a href="#">SO I - T</a></li>
+						<li><a href="#">SO I - N</a></li>
+						<li><a href="#">MPC - T</a></li>
+						</ul>
+					</li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Relatórios<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#">Notas</a></li>
+			            <li><a href="#">Faltas</a></li>
+			          </ul>
+			        </li>
+			    </ul>
+				<div class="navbar-collapse collapse navbar-right">
+			      	<h:form class="navbar-form navbar-right" action="login">
+			      	<div class="input-group">
+				      <input type="text" class="form-control" placeholder="Search for..."/>
+				      <span class="input-group-btn">
+				        <button class="btn btn-disabled" type="button" disabled="disabled">
+				        <span class="fa fa-search" aria-hidden="true"></span>
+				        </button>
+				      </span>
+				    </div>
+					</h:form>
+				</div>
+		    </div>   
+		  </div>
+		</nav>	
+	<h:dataTable value="#{discmb.lista}" var="disc">
+	<div class="col-sm-6 col-md-6">
+		<div class="thumbnail">
+			<div class="jumbotron container">
+                <h1><h:outputText value="#{disc.nome}"/>
+                  <small><h:outputText value="#{disc.id}"/></small>
+                </h1>
+                <p><h:outputText value="#{disc.turno}"/></p>
+				<h:dataTable value="#{alunomb.lista}" var="aluno" class="table  table-striped">
+					<h:column headerText="RA">				
+				    	<f:facet name="header">
+				    		<h:outputText value="RA"/>
+				    	</f:facet>
+				    	<h:outputText value="#{alunomb.ra}" />
+				    </h:column>
+				    <h:column headerText="Nome Aluno">				
+				    	<f:facet name="header">
+				    		<h:outputText value="Nome Aluno"/>
+				    	</f:facet>
+				    	<h:outputText value="#{alunomb.nome}" />
+				    </h:column>
+				</h:dataTable>
+            </div>
+		</div>
+	</div>
+</h:dataTable >
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</h:body>
+</html>
