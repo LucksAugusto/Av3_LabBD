@@ -6,7 +6,7 @@
 		xmlns:p="http://primefaces.org/ui">
 <h:head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Grade de Notas</title>
+<title>Grade de Faltas</title>
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
@@ -16,38 +16,41 @@
 	<div class="col-lg-8 col-md-6 col-lg-offset-2">
 		<div class="thumbnail">
 			<div class="jumbotron">
-				<h2>Banco de Dados
-				<small>Notas</small>
+				<h2>Laboratório de Banco de Dados
+				<small>Faltas</small>
 				</h2>
 			</div>
+			
 			<h:form>
 				<label for="materia">Matéria</label>
-				<input class="form-control" value="Banco de Dados" disabled="disabled" id="materia"/>
-				<h:inputHidden value="4226004"/>
+				<input class="form-control" value="Laboratório de Banco de Dados" disabled="disabled" id="materia"/>
+				<h:inputHidden value="4233005"/>
 				<br />	
+				<label for="datePicker">Data</label>
+	    		<input class="form-control" type="date" id="theDate"/>
+	    		<br />
 				<label for="ra">R.A Aluno</label>
-				<h:selectOneMenu id="ra" class="form-control" value="#{aoctmb.aluno}" var="ras">
+				<h:selectOneMenu id="ra" class="form-control" value="#{raMB.raList}" var="ras">
 					<f:selectItem itemValue="" itemLabel="Selecione o RA..." disabled="disabled" selected="selected" hidden="hidden"/>
-					<f:selectItems value="#{ras.ra}" />
+					<f:selectItems value="#{ras.ra}"/>
 	    		</h:selectOneMenu>
 	    		<br />
-	    		<label for="nota">Nota</label>
-	    		<h:inputText class="form-control" value=""/>
-	    		<br />
-	    		<label for="tipo">Prova</label>
+	    		<label for="tipo">Presença</label>
 	    		<h:selectOneRadio value="">
-				   	<f:selectItem itemValue="1" itemLabel="P1" class="radio"/>
-		  		 	<f:selectItem itemValue="2" itemLabel="P2" class="radio"/>
-		 	 	 	<f:selectItem itemValue="4" itemLabel="Trabalho" class="radio"/>
-		 	 	 	<f:selectItem itemValue="6" itemLabel="Exame" class="radio"/>
+				   	<f:selectItem itemValue="P" itemLabel="Presente" class="radio"/>
+		  		 	<f:selectItem itemValue="F" itemLabel="Faltou" class="radio"/>
 				</h:selectOneRadio>
 	    		<br />
-	    		<h:commandButton class="btn btn-success" value="Atribuir Nota" action="#{notamb.salvar}"/>
+	    		<h:commandButton class="btn btn-success" value="Chamar" action="#{chamadamb.chamar}"/>
 			</h:form>
 		</div>
 	</div>
 </div>
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script>
+	​
+	</script>
 </h:body>
 </html>

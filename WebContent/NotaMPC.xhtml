@@ -23,7 +23,7 @@
 			<h:form>
 				<label for="materia">Matéria</label>
 				<input class="form-control" value="Métodos Para a Produção do Conhecimento" disabled="disabled" id="materia"/>
-				<h:inputHidden value="5005-220"/>
+				<h:inputHidden value="5005220"/>
 				<br />	
 				<label for="ra">R.A Aluno</label>
 				<h:selectOneMenu id="ra" class="form-control" value="#{aoctmb.aluno}" var="ras">
@@ -36,9 +36,9 @@
 	    		<br />
 	    		<label for="tipo">Prova</label>
 	    		<h:selectOneRadio value="">
-				   	<f:selectItem itemValue="1" itemLabel="Monografia Resumida" class="radio"/>
-		  		 	<f:selectItem itemValue="2" itemLabel="Monografia Completa" class="radio"/>
-		 	 	 	<f:selectItem itemValue="4" itemLabel="Exame" class="radio"/>
+				   	<f:selectItem itemValue="7" itemLabel="Monografia Resumida" class="radio"/>
+		  		 	<f:selectItem itemValue="8" itemLabel="Monografia Completa" class="radio"/>
+		 	 	 	<f:selectItem itemValue="6" itemLabel="Exame" class="radio"/>
 				</h:selectOneRadio>
 	    		<br />
 	    		<h:commandButton class="btn btn-success" value="Atribuir Nota" action="#{notamb.salvar}"/>

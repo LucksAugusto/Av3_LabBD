@@ -23,7 +23,7 @@
 			<h:form>
 				<label for="materia">Matéria</label>
 				<input class="form-control" value="Laboratório de Banco de Dados" disabled="disabled" id="materia"/>
-				<h:inputHidden value="4233-005"/>
+				<h:inputHidden value="4233005"/>
 				<br />	
 				<label for="ra">R.A Aluno</label>
 				<h:selectOneMenu id="ra" class="form-control" value="#{aoctmb.aluno}" var="ras">
@@ -39,7 +39,7 @@
 				   	<f:selectItem itemValue="1" itemLabel="P1" class="radio"/>
 		  		 	<f:selectItem itemValue="2" itemLabel="P2" class="radio"/>
 		 	 	 	<f:selectItem itemValue="3" itemLabel="P3" class="radio"/>
-		 	 	 	<f:selectItem itemValue="4" itemLabel="Exame" class="radio"/>
+		 	 	 	<f:selectItem itemValue="6" itemLabel="Exame" class="radio"/>
 				</h:selectOneRadio>
 	    		<br />
 	    		<h:commandButton class="btn btn-success" value="Atribuir Nota" action="#{notamb.salvar}"/>

@@ -2,14 +2,14 @@ package model;
 
 public class Aluno {
 
-	private String ra;
+	private int ra;
 	private String nome;
 	
-	public String getRa() {
+	public int getRa() {
 		return ra;
 	}
-	public void setRa(String ra) {
-		this.ra = ra;
+	public void setRa(int i) {
+		this.ra = i;
 	}
 	public String getNome() {
 		return nome;
